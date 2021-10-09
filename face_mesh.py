@@ -92,7 +92,7 @@ if app_mode == 'Run App on Image':
         demo_image = DEMO_IMAGE
         image = np.array(Image.open(DEMO_IMAGE))
 
-    st.sidebar.text("Original Image")
+    st.sidebar.text("Input Image:")
     st.sidebar.image(image)
     face_count = 0
 
@@ -124,7 +124,7 @@ if app_mode == 'Run App on Image':
                 .get_default_face_mesh_contours_style())
 
                 kpi1_text.write(f"<h1 style='text-align: center; color: red;'>{face_count}</h1>", unsafe_allow_html=True)
-            st.subheader('Output Image')
+            st.subheader('Output Image:')
             st.image(out_image,use_column_width= True)
 
 
